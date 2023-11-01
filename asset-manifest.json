@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Ayushmehra2000/chatme/static/css/main.f3237149.css",
-    "main.js": "/Ayushmehra2000/chatme/static/js/main.198c9131.js",
+    "main.js": "/Ayushmehra2000/chatme/static/js/main.af30c83c.js",
     "static/js/787.03b1e42a.chunk.js": "/Ayushmehra2000/chatme/static/js/787.03b1e42a.chunk.js",
     "index.html": "/Ayushmehra2000/chatme/index.html",
     "main.f3237149.css.map": "/Ayushmehra2000/chatme/static/css/main.f3237149.css.map",
-    "main.198c9131.js.map": "/Ayushmehra2000/chatme/static/js/main.198c9131.js.map",
+    "main.af30c83c.js.map": "/Ayushmehra2000/chatme/static/js/main.af30c83c.js.map",
     "787.03b1e42a.chunk.js.map": "/Ayushmehra2000/chatme/static/js/787.03b1e42a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f3237149.css",
-    "static/js/main.198c9131.js"
+    "static/js/main.af30c83c.js"
   ]
 }

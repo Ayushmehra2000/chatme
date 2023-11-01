@@ -25,9 +25,9 @@ function App() {
       path: '/',
       errorElement: <Error404 />,
       children: [
-        {path: '', element: isLogin? <Home />:<Navigate to="/login" /> },
-        {path: 'signup', element: <SignUp /> },
-        {path: 'login', element: <Login /> },
+        {path: true, element: isLogin? <Home />:<Navigate to="/login" /> },
+        {path: '/signup', element: <SignUp /> },
+        {path: '/login', element: <Login /> },
       ],
     },
     

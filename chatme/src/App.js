@@ -2,6 +2,7 @@ import './App.css';
 import { SignUp } from './components/createaccount/createaccount';
 import { Home } from './components/home/home';
 import { Error404 } from './components/Errorhandling/error';
+import {BrowserRouter,Route,Routes} from "react-router-dom";
 import {
   createBrowserRouter,
   Navigate,
@@ -12,25 +13,24 @@ import { useUsersValue } from './Context/userContext';
 import { useEffect } from 'react';
 
 function App() {
-  const {isLogin, setIslogin} = useUsersValue()
+  const { isLogin, setIslogin } = useUsersValue()
 
-  useEffect(()=>{
+  useEffect(() => {
     const check = window.localStorage.getItem("islogin");
-    if(check === "true"){
+    if (check === "true") {
       setIslogin(true);
     }
-  },[])
+  }, [])
   const router = createBrowserRouter([
     {
       path: '/',
       errorElement: <Error404 />,
       children: [
-        {path: true, element: isLogin? <Home />:<Navigate to="/login" /> },
-        {path: '/signup', element: <SignUp /> },
-        {path: '/login', element: <Login /> },
+        {index:true, element: isLogin? <Home />:<Navigate to="/login" /> },
+        {path: 'signup', element: <SignUp /> },
+        {path: 'login', element: <Login /> },
       ],
     },
-    
   ]);
   return (
     <div className="App">

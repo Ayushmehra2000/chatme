@@ -17,7 +17,7 @@ export function Login() {
         const check = window.localStorage.getItem("islogin");
         if(check === "true"){
           setIslogin(true);
-          return Navigate("/");
+          return Navigate("/chatme/");
         }
       },[])
     const handleLogin = (e) => {
@@ -27,10 +27,10 @@ export function Login() {
             window.localStorage.setItem("islogin","true");
             clearInput();
             toast.success("User Login Successfully !")
-            return Navigate("/");
+            return Navigate("/chatme/");
         }
         clearInput();
-        return Navigate("/login");
+        return Navigate("/chatme/login");
     }
     return (<>
         <div className="Login-Container">
@@ -41,7 +41,7 @@ export function Login() {
                     <input type="password" className="password" placeholder="Password" ref={password} />
                     <button onClick={(e) => handleLogin(e)}> Login </button>
                 </form>
-                <p>Don't have account? <Link to="/signup">Create it</Link></p>
+                <p>Don't have account? <Link to="/chatme/signup">Create it</Link></p>
             </div>
         </div>
     </>);

@@ -50,7 +50,7 @@ export function LeftSidebar() {
         window.localStorage.setItem("islogin","false");
         setIslogin(false);
         toast.success("User Logout Successfully !")
-        return Navigate("/");
+        return Navigate("/chatme/");
     }
     return (<>
         <div className="left-sidebar">

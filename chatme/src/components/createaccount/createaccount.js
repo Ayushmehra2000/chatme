@@ -24,7 +24,7 @@ export function SignUp(){
                 <input type="password" className="password" placeholder="Password" ref={password} />
                 <button onClick={handleSubmit} >Create Account</button>
             </form>
-            <p className="para">Already have Account? <Link to="/login">Login</Link></p>
+            <p className="para">Already have Account? <Link to="/chatme/login">Login</Link></p>
         </div>
     </div>
     </>);

@@ -2,7 +2,6 @@ import './App.css';
 import { SignUp } from './components/createaccount/createaccount';
 import { Home } from './components/home/home';
 import { Error404 } from './components/Errorhandling/error';
-import {BrowserRouter,Route,Routes} from "react-router-dom";
 import {
   createBrowserRouter,
   Navigate,
@@ -23,15 +22,15 @@ function App() {
   }, [])
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: '/chatme/',
       errorElement: <Error404 />,
       children: [
-        {index:true, element: isLogin? <Home />:<Navigate to="/login" /> },
-        {path: 'signup', element: <SignUp /> },
-        {path: 'login', element: <Login /> },
+        {index:true, element: isLogin? <Home />:<Navigate to="/chatme/login" /> },
+        {path: '/chatme/signup', element: <SignUp /> },
+        {path: '/chatme/login', element: <Login /> },
       ],
     },
-  ]);
+  ]); 
   return (
     <div className="App">
       <RouterProvider router={router} />
